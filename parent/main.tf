@@ -2,9 +2,9 @@ module "resource_group" {
      source = "../resourcegroup"
   //source   = "c:/terraform/resourcegroup"
   rgvar1   = "myTFResourceGroup"
-  
+  rgvar2   = "myTFResourceGroup2"
+ 
 }
-
 module "storage_account" {
     source = "../storageac"
  // source                   = "c:/terraform/storageac"
