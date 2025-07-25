@@ -6,8 +6,8 @@ module "resource_group" {
  
 }
 module "storage_account" {
-    source = "../storageac"
- // source                   = "c:/terraform/storageac"
+    //source = "../storageac"
+   source                   = "c:/terraform/storageac"
   storagename_account_name = "mystorageacctname123"
   resource_group_name      = "myTFResourceGroup"
   account_tier             = "Standard"
