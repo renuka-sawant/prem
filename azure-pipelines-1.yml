@@ -38,5 +38,6 @@ steps:
     provider: 'azurerm'
     command: 'plan'
     workingDirectory: '$(System.DefaultWorkingDirectory)/parent'
-    environmentServiceNameAzureRM: 'pipelineserco'  # Same service connection
+    environmentServiceNameAzureRM: 'pipelineserco'  # This must be a valid AzureRM service connection
     useEntraId: true
+
