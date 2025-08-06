@@ -23,8 +23,8 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'init'
-    workingDirectory: '$(System.DefaultWorkingDirectory)/prem/parent'
-    backendServiceArm: 'Azure subscription 1(2c279754-9ded-4271-a952-14fe81a08ff4)'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/prem/parent/main.tf'
+    backendServiceArm: 'pipelineserco'
     backendAzureRmStorageAccountName: 'rg11stor'
     backendAzureRmContainerName: 'rg11container'
-    backendAzureRmKey: 'terraform.tfstate'
+    backendAzureRmKey: 'terraform'
