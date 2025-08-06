@@ -14,7 +14,6 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
-
 - task: TerraformInstaller@1
   inputs:
     terraformVersion: 'latest'
@@ -23,8 +22,10 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'init'
-    workingDirectory: '$(System.DefaultWorkingDirectory)/prem/parent/main.tf'
-    backendServiceArm: 'pipelineserco'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/prem/parent'
+    backendServiceArm: 'pipelineserco'  # Your Azure service connection name
+    backendAzureRmResourceGroupName: 'rg11'  # ⬅️ Add this
     backendAzureRmStorageAccountName: 'rg11stor'
     backendAzureRmContainerName: 'rg11container'
-    backendAzureRmKey: 'terraform'
+    backendAzureRmKey: 'terraform.tfstate'  # better to give full filename
+      # ⬅️ Enables secure auth
